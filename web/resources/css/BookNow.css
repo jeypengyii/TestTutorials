@@ -1,0 +1,213 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 29, 2021, 12:21:15 AM
+    Author     : Christian Cornejo
+*/
+
+body {
+  background-repeat: repeat;
+  background: #f3f3f3;
+  font-family: "Roboto", sans-serif;
+  color: #5b626b;
+  font-size: 13.5px;
+}
+.forpadding{
+  padding-top: 120px;
+  padding-bottom: 150px;
+
+}
+.allign
+{text-align: center;}
+
+
+.color{
+  color: dimgray;
+}
+h1{
+  font-size: 50px;
+}
+.classh2{
+  font-size: 20px;
+}
+.all{
+  text-align:right;
+}
+.all2{
+  text-align:left;
+}
+.btn-padding {
+  padding-left: 5px;
+}
+.centerall{
+  text-align: center;
+}
+hr.new1 {
+  border: 1px solid #f16c69;
+  border-radius: 1px;
+}
+.pl {
+  padding-left: 35px;
+}
+
+.hidden {
+  display:none;
+}
+
+.white{
+  background: #f2f2f2 !important;
+}
+
+.blockquote-footer::before {
+  content: "*\00A0";
+}
+
+.blockquote-footer {
+  display: block;
+  font-size: 90%;
+  color: #e64444;
+}
+
+.table td, .table th {
+  padding: .75rem !important;
+}
+
+.table tfoot th {
+  border-top: 2px solid #dee2e6;
+}
+#errmsg{
+  color: red;
+}
+#errmsg2,#importermgs{
+  color: red;
+}
+
+.tooltip, .tooltip-show p {
+  text-align: left !important;
+  font-size: 85% !important;
+}
+.table-md td, .table-md th {
+  padding: .6rem !important;
+}
+.table-hover tbody tr:hover, .thead-default th, selected_tr {
+  background-color: #e1e2f5;
+  cursor: pointer;
+}
+.custom-nowrap {
+  width: 3%; 
+  white-space: nowrap;
+}
+.noshadow {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.modal {
+  z-index:999999990;
+  overflow-y:auto !important;
+}
+.modal-body {
+  max-height: 95vh;
+  overflow-y: auto;
+}
+.bootstrap-maxlength {
+  z-index: 999999 !important;
+}
+.modal-dialog-full {
+  width: 90%;
+  height: 90%;
+  min-height: 50%;
+  max-width: none !important;
+}
+.modal-content-full {
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  border-radius: 0;
+}
+.noshadow {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.required:before {
+  color: red;
+  content: "* ";
+}
+.form-control-lg {
+  font-size: 1.25rem;
+}
+#error_container {font-size: 1.2rem !important;}
+.row, .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  margin-left:0;
+  margin-right:0;
+}
+
+/*----------|MATERIAL SWITCH CSS|----------*/
+.material-switch > input[type="checkbox"] {
+  display: none;   
+}
+
+.material-switch > label {
+  cursor: pointer;
+  height: 0px;
+  position: relative; 
+  width: 40px;  
+}
+
+.material-switch > label::before {
+  background: rgb(0, 0, 0);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  content: '';
+  height: 16px;
+  margin-top: -8px;
+  position:absolute;
+  opacity: 0.3;
+  transition: all 0.4s ease-in-out;
+  width: 40px;
+}
+.material-switch > label::after {
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  content: '';
+  height: 24px;
+  left: -4px;
+  margin-top: -8px;
+  position: absolute;
+  top: -4px;
+  transition: all 0.3s ease-in-out;
+  width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+  background: inherit;
+  opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+  background: inherit;
+  left: 20px;
+}
+.label-primary {
+  background-color: #d9534f;
+}
+.fs-rem-sm {
+  font-size: 0.8rem;
+}
+.fs-pt-14 {
+  font-size: 14pt;
+}
+.fs-pt-18 {
+  font-size: 18pt;
+}
+.max-w-px-300 {
+  max-width: 300px;
+}
+.datatable-button-custom {
+  border-collapse: collapse!important;
+  border-spacing: 0!important; 
+  width: 100%!important;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    
+  <definition name="error_page" template="/WEB-INF/errors/ErrorPage.jsp"></definition>  
+    
+  <definition name="base.definition"  template="/WEB-INF/jsp/tiles/layout.jsp">
+    <put-attribute name="title" value="" />
+    <put-attribute name="header" value="/WEB-INF/jsp/tiles/header.jsp" />
+    <put-attribute name="menu" value="" />
+    <put-attribute name="footer" value="" />
+  </definition>
+  
+  
+  <!--  <definition name="Homepage" extends="base.definition">
+    <put-attribute name="title" value="Homepage" />
+    <put-attribute name="body" value="/WEB-INF/jsp/pages/homepage.jsp" />
+  </definition>
+  
+  
+  <definition name="Test" extends="base.definition">
+    <put-attribute name="title" value="Test Module" />
+    <put-attribute name="body" value="/WEB-INF/jsp/pages/test.jsp" />
+  </definition>-->
+  
+  <definition name="Viewmovie" extends="base.definition">
+    <put-attribute name="title" value="View Movie" />
+    <put-attribute name="body" value="/WEB-INF/jsp/pages/viewmovie.jsp" />
+  </definition>
+  
+  <definition name="Addmovie" extends="base.definition">
+    <put-attribute name="title" value="Add Movie" />
+    <put-attribute name="body" value="/WEB-INF/jsp/pages/addmovie.jsp" />
+  </definition>      
+  
+  <definition name="Searchmovie" extends="base.definition">
+    <put-attribute name="title" value="Search Movie" />
+    <put-attribute name="body" value="/WEB-INF/jsp/pages/searchmovie.jsp" />
+  </definition>  
+  
+  <definition name="Homepage" extends="base.definition">
+    <put-attribute name="title" value="Search Movie" />
+    <put-attribute name="body" value="/WEB-INF/jsp/pages/searchmovie.jsp" />
+  </definition>  
+  
+  <definition name="Updatemovie" extends="base.definition">
+    <put-attribute name="title" value="Update Movie" />
+    <put-attribute name="body" value="/WEB-INF/jsp/pages/edit.jsp" />
+  </definition> 
+
+</tiles-definitions>  
+
