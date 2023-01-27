@@ -62,6 +62,7 @@ public class TurorialsController {
   @RequestMapping("/Addmovie")
   public ModelAndView addmovie(TutorialsBean tutorialsBean) {
     ModelAndView mav = new ModelAndView("Addmovie");
+    //command-keyword
     mav.addObject("command", tutorialsBean);
     return mav;
   }
@@ -81,8 +82,9 @@ public class TurorialsController {
   }
 
   @RequestMapping("/Searchmovie")
-  public ModelAndView searchmovie() {
+  public ModelAndView searchmovie(TutorialsBean tutorialsBean) {
     ModelAndView mav = new ModelAndView("Searchmovie");
+    mav.addObject("command", tutorialsBean);
     return mav;
   }
 ////////////////////////////////////////////////
@@ -115,13 +117,19 @@ public class TurorialsController {
   }
 
   @RequestMapping(value = "/linkDescList", method = RequestMethod.POST)
-  public ModelAndView showlinkDescList(HttpServletRequest req, HttpServletResponse response) {
+  public ModelAndView showlinkDescList(TutorialsBean tutorialsBean, HttpServletRequest req, HttpServletResponse response) {
+
     String movie_title = req.getParameter("title");
     String release_date = req.getParameter("release_date");
-//    String genre = req.getParameter("genre");
+
+//    TutorialsBean sampleBean = new TutorialsBean();
+//    sampleBean.setMovie_title("");
+//    sampleBean.setRelease_date("");
+
+
     System.out.println("movie_title " + movie_title);
     System.out.println("release_date " + release_date);
-    List<TutorialsBean> list = tutorialsDao.list(movie_title, release_date);
+    List<TutorialsBean> list = tutorialsDao.list(tutorialsBean);
 
     for (int i = 0; i < list.size(); i++) {
       System.out.println("TITLE " + list.get(i).getMovie_title());
@@ -129,6 +137,7 @@ public class TurorialsController {
 
     ModelAndView mav = new ModelAndView("Searchmovie");
     mav.addObject("list", list);
+    mav.addObject("command", tutorialsBean);
     return mav;
 
   }

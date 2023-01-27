@@ -54,13 +54,16 @@ public class TutorialsDao {
     });
   }
 
-  public List<TutorialsBean> list(String movie_title, String release_date) {
+  public List<TutorialsBean> list(TutorialsBean tutorialsBean) {
+//    System.out.println("list dao");
+//    System.out.println("movie title " + tutorialsBean.getMovie_title());
+//    System.out.println("release date " + tutorialsBean.getRelease_date());
     String sql = "SELECT id, movie_title, genre, release_date \n"
             + "FROM movie_table  \n"
             + "WHERE \n"
             + " CASE WHEN ? <> '' THEN UPPER(movie_title) = UPPER(?) ELSE 1=1 END\n"
             + "AND CASE WHEN ? <> '' THEN release_date = date(?) ELSE 1=1 END;";
-    return template.query(sql, new Object[]{movie_title, movie_title, release_date, release_date}, new RowMapper<TutorialsBean>() {
+    return template.query(sql, new Object[]{tutorialsBean.getMovie_title(),tutorialsBean.getMovie_title(), tutorialsBean.getRelease_date(),  tutorialsBean.getRelease_date()}, new RowMapper<TutorialsBean>() {
       public TutorialsBean mapRow(ResultSet rs, int row) throws SQLException {
         TutorialsBean bean = new TutorialsBean();
         bean.setId(rs.getInt("id"));

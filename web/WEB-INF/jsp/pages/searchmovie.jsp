@@ -56,17 +56,17 @@
 
         <div id="form">
           <div class="card-body">
-            <form action="${pageContext.request.contextPath}/linkDescList" method="POST"> 
+            <form:form action="${pageContext.request.contextPath}/linkDescList" method="POST"> 
               <legend class="cust-legend">Search Movie</legend>
 
               <label for="genre">Title:</label>
-              <input type="text" placeholder="Title " name="title"><br /><br />
+              <form:input type="text" placeholder="Title " path="movie_title" name="title"/><br /><br />
 
               <label for="genre">Release Date:</label>
-              <input type="date" placeholder="Release Date " name="release_date"><br /><br />
+              <form:input type="date" placeholder="Release Date " path="release_date" name="release_date"/><br /><br />
 
               <button type="submit" id ="btn_confirm" class="btn btn-primary rounded-4 me-2">Search</button> 
-            </form>
+            </form:form>
           </div>
         </div>
 
