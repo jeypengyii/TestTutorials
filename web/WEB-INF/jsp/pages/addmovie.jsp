@@ -108,19 +108,18 @@
   //  });-->
 
   <script>
-                  function() {
+                  function () {
+                    const movieTitle = $("#movie_title").val()
                     $.ajax({
 
                       url:
                               'https://jsonplaceholder.typicodecom/todos/1',
-
                       type: POST,
 
                       success: function (data) {
                         var x = JSON.stringify(data);
                         console.log(x);
                       },
-
 //error handling
 
                       error: function (error) {
