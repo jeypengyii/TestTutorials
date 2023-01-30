@@ -4,6 +4,9 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<!doctype html>
+<html lang="en">
+  
 <head>
   <style type="text/css">
     label{
