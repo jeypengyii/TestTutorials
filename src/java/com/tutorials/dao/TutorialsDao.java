@@ -61,10 +61,9 @@ public class TutorialsDao {
     String sql = "SELECT id, movie_title, genre, release_date \n"
             + "FROM movie_table  \n"
             + "WHERE \n"
-           
             + " CASE WHEN ? <> '' THEN UPPER(movie_title) LIKE UPPER (?)||'%' ELSE true END\n"
             + "AND CASE WHEN ? <> '' THEN release_date = date(?) ELSE 1=1 END;";
-    return template.query(sql, new Object[]{tutorialsBean.getMovie_title(),tutorialsBean.getMovie_title(), tutorialsBean.getRelease_date(),  tutorialsBean.getRelease_date()}, new RowMapper<TutorialsBean>() {
+    return template.query(sql, new Object[]{tutorialsBean.getMovie_title(), tutorialsBean.getMovie_title(), tutorialsBean.getRelease_date(), tutorialsBean.getRelease_date()}, new RowMapper<TutorialsBean>() {
       public TutorialsBean mapRow(ResultSet rs, int row) throws SQLException {
         TutorialsBean bean = new TutorialsBean();
         bean.setId(rs.getInt("id"));
@@ -82,9 +81,11 @@ public class TutorialsDao {
 //    String sql = "SELECT movie_table WHERE movie_table=?;";
 //    return template.queryForObject(sql, new Object[]{id}, Integer.class);
 //  }
-  public int saveData(TutorialsBean bean) {
-    String sql = "INSERT INTO movie_table(movie_title, genre, release_date) VALUES(?, ?, date(?));";
-    return template.update(sql, bean.getMovie_title(), bean.getGenre(), bean.getRelease_date());
+  public int saveData(String title, String genre, String date) {
+
+    String sql = "INSERT INTO movie_table(movie_title, genre, release_date) VALUES(?, ?, date(?))";
+    return template.update(sql, title, genre, date);
+
   }
 
   public int updateData(int id, String movie_title, String genre, String release_date) {

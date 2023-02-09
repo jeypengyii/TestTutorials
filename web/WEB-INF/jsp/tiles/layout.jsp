@@ -83,6 +83,13 @@
     </div>
   </div>
 
+  
+  
+  <c:if test ="${ active_page eq movies}">
+    <script src="${pageContext.request.contextPath}/resources/modules/movies.js"></script>
+  </c:if>
+  
+  
   <footer>
     <!-- MAIN JS -->
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
